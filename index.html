@@ -34,14 +34,6 @@
       </div>
 
       <!-- Drop-down panels -->
-      <div class="panel" id="p-produits" hidden>
-        <a href="#effects">Effet béton</a>
-        <a href="#effects">Effet marbre</a>
-        <a href="#effects">Effet pierre</a>
-        <a href="#effects">Effet bois</a>
-        <a href="#effects">Effet contemporain</a>
-        <a href="#effects">Sanitaire & robinetterie</a>
-      </div>
       <div class="panel" id="p-entreprise" hidden>
         <a href="#about">Qui sommes-nous</a>
         <a href="#inspiration">Réalisations</a>
@@ -49,6 +41,64 @@
         <a href="#footer">Contacts</a>
       </div>
     </nav>
+
+    <!-- Products mega-menu (full width) -->
+    <div class="mega mega--products" id="p-produits" hidden>
+      <div class="mega__col mega__col--catalog">
+        <a href="#effects" class="mega__cover"><div class="mega__img tile tile--concrete"></div></a>
+        <a href="#effects" class="mega__foot">Nouveauté · Urban · Gris <span class="ico">&#8594;</span></a>
+      </div>
+      <div class="mega__main">
+        <form class="mega__search" role="search" onsubmit="event.preventDefault()">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="2.2"/></svg>
+          <input type="search" placeholder="Rechercher un code produit…" aria-label="Rechercher un code produit">
+        </form>
+        <div class="mega__cols">
+          <div class="mega__col">
+            <p class="mega__head">Effet</p>
+            <nav class="mega__list" aria-label="Effet">
+            <a href="#effects">Béton</a>
+            <a href="#effects">Contemporain</a>
+            <a href="#effects">Haute performance</a>
+            <a href="#effects">Marbre</a>
+            <a href="#effects">Pierre</a>
+            <a href="#effects">Bois</a>
+            </nav>
+            <a href="#effects" class="mega__foot">Tous les produits <span class="ico">&#8594;</span></a>
+          </div>
+          <div class="mega__col">
+            <p class="mega__head">Couleur</p>
+            <nav class="mega__list" aria-label="Couleur">
+            <a href="#effects">Blanc</a>
+            <a href="#effects">Beige</a>
+            <a href="#effects">Jaune</a>
+            <a href="#effects">Rouge</a>
+            <a href="#effects">Bleu</a>
+            <a href="#effects">Vert</a>
+            <a href="#effects">Gris</a>
+            <a href="#effects">Noir</a>
+            <a href="#effects">Marron</a>
+            <a href="#effects">Autres couleurs</a>
+            </nav>
+          </div>
+          <div class="mega__col">
+            <p class="mega__head">Usage</p>
+            <nav class="mega__list" aria-label="Usage">
+            <a href="#effects">Intérieur</a>
+            <a href="#effects">Extérieur</a>
+            </nav>
+          </div>
+          <div class="mega__col">
+            <p class="mega__head">Espace</p>
+            <nav class="mega__list" aria-label="Espace">
+            <a href="#inspiration">Salle de bain</a>
+            <a href="#inspiration">Cuisine</a>
+            <a href="#inspiration">Sanitaire & robinetterie</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Collections mega-menu (full width) -->
     <div class="mega" id="p-collections" hidden>
