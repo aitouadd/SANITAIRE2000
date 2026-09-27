@@ -1,117 +1,151 @@
 // SANITAIRE 2000 — interactions
 (function () {
-  // Header shadow on scroll
-  var header = document.getElementById('header');
-  window.addEventListener('scroll', function () {
-    header.classList.toggle('is-scrolled', window.scrollY > 10);
-  });
-
-  // Mobile menu
-  var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
-  burger.addEventListener('click', function () {
-    var open = nav.classList.toggle('is-open');
-    burger.classList.toggle('is-open', open);
-    burger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+
+  // ---------- Menu drop-downs ----------
+  var btns = document.querySelectorAll('.menu__btn[data-panel]');
+  function closeAll(except) {
+    btns.forEach(function (b) {
+      if (b === except) return;
+      b.setAttribute('aria-expanded', 'false');
+      document.getElementById(b.dataset.panel).hidden = true;
+    });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = b.getAttribute('aria-expanded') !== 'true';
+      closeAll(b);
+      b.setAttribute('aria-expanded', open);
+      document.getElementById(b.dataset.panel).hidden = !open;
+    });
   });
-  nav.querySelectorAll('a').forEach(function (a) {
+  document.addEventListener('click', function (e) { if (!e.target.closest('.menu')) closeAll(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+  document.querySelectorAll('.panel a').forEach(function (a) {
     a.addEventListener('click', function () {
-      nav.classList.remove('is-open');
-      burger.classList.remove('is-open');
-      burger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeAll();
+      if (a.dataset.tabLink) selectTab(a.dataset.tabLink);
     });
   });
 
-  // Search toggle
-  var search = document.getElementById('search');
-  document.getElementById('searchBtn').addEventListener('click', function () {
-    search.classList.toggle('is-open');
-    if (search.classList.contains('is-open')) search.querySelector('input').focus();
+  // Hide the logo once the hero is scrolled past (desktop), recolor on mobile
+  var dark = document.querySelectorAll('.hero, .slider, .inspiration');
+  function onScroll() {
+    var y = window.scrollY;
+    nav.classList.toggle('is-scrolled', y > 40);
+    var onDark = false;
+    dark.forEach(function (s) {
+      var r = s.getBoundingClientRect();
+      if (r.top <= 40 && r.bottom > 40) onDark = true;
+    });
+    nav.classList.toggle('on-dark', onDark);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ---------- Hero video play/pause ----------
+  var video = document.querySelector('.hero__video');
+  var vBtn = document.getElementById('videoToggle');
+  vBtn.addEventListener('click', function () {
+    if (video.paused) { video.play().catch(function () {}); vBtn.classList.remove('is-paused'); }
+    else { video.pause(); vBtn.classList.add('is-paused'); }
   });
 
-  // Hero slider
-  var slides = document.querySelectorAll('.hero__slide');
-  var dotsWrap = document.getElementById('heroDots');
-  var current = 0, timer;
-  slides.forEach(function (_, i) {
-    var b = document.createElement('button');
-    b.setAttribute('aria-label', 'Diapositive ' + (i + 1));
-    b.addEventListener('click', function () { go(i); });
-    dotsWrap.appendChild(b);
+  // ---------- Full-screen slider with names "A, B, C" ----------
+  var slides = document.querySelectorAll('.slider__slide');
+  var titles = document.getElementById('sliderTitles');
+  var sBtn = document.getElementById('sliderToggle');
+  var current = 0, timer = null, playing = true;
+
+  slides.forEach(function (s, i) {
+    if (i) titles.appendChild(Object.assign(document.createElement('i'), { textContent: ', ' }));
+    var span = document.createElement('span');
+    span.textContent = s.dataset.name;
+    span.addEventListener('click', function () { show(i); restart(); });
+    titles.appendChild(span);
   });
-  var dots = dotsWrap.querySelectorAll('button');
-  function go(i) {
+  var names = titles.querySelectorAll('span');
+
+  function show(i) {
     slides[current].classList.remove('is-active');
-    dots[current].classList.remove('is-active');
+    names[current].classList.remove('is-current');
     current = (i + slides.length) % slides.length;
     slides[current].classList.add('is-active');
-    // restart the progress animation
-    void dots[current].offsetWidth;
-    dots[current].classList.add('is-active');
+    names[current].classList.add('is-current');
+  }
+  function restart() {
     clearInterval(timer);
-    timer = setInterval(function () { go(current + 1); }, 6000);
+    if (playing) timer = setInterval(function () { show(current + 1); }, 4000);
   }
-  document.getElementById('heroPrev').addEventListener('click', function () { go(current - 1); });
-  document.getElementById('heroNext').addEventListener('click', function () { go(current + 1); });
-  go(0);
-
-  // Collection filters
-  var filterBtns = document.querySelectorAll('#filters button');
-  var cards = document.querySelectorAll('#grid .card');
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
-      btn.classList.add('is-active');
-      var f = btn.dataset.filter;
-      cards.forEach(function (c) {
-        c.classList.toggle('is-hidden', f !== 'all' && c.dataset.cat !== f);
-      });
-    });
+  sBtn.addEventListener('click', function () {
+    playing = !playing;
+    sBtn.classList.toggle('is-paused', !playing);
+    restart();
   });
+  show(0); restart();
 
-  // Projects carousel arrows
-  var track = document.getElementById('projects-track');
-  function step() { var p = track.querySelector('.project'); return p ? p.offsetWidth + 28 : 300; }
-  document.getElementById('projNext').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
-  document.getElementById('projPrev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  // ---------- Effects / Collections tabs ----------
+  var tabs = document.querySelectorAll('.tab');
+  var groups = document.querySelectorAll('.cards');
+  var mobileIndex = 0;
 
-  // Reveal on scroll + number counters
-  var revealEls = document.querySelectorAll('.section__head, .card, .intro__grid > *, .split__text > *, .mosaic__item, .project, .numbers li, .store');
-  revealEls.forEach(function (el) { el.classList.add('reveal'); });
-
-  function countUp(el) {
-    var target = +el.dataset.count, start = null;
-    function tick(t) {
-      if (!start) start = t;
-      var p = Math.min((t - start) / 1600, 1);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString('fr-FR');
-      if (p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
+  function activeCards() { return document.querySelectorAll('.cards.is-active .card'); }
+  function selectTab(name) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === name;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on);
+    });
+    groups.forEach(function (g) { g.classList.toggle('is-active', g.dataset.group === name); });
+    mobileIndex = 0; updateMobile();
   }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { selectTab(t.dataset.tab); }); });
 
+  // Mobile: one card at a time with arrows
+  var prev = document.querySelector('.arrow--prev');
+  var next = document.querySelector('.arrow--next');
+  function updateMobile() {
+    var cards = activeCards();
+    document.querySelectorAll('.card.is-current').forEach(function (c) { c.classList.remove('is-current'); });
+    if (cards[mobileIndex]) cards[mobileIndex].classList.add('is-current');
+    prev.disabled = mobileIndex === 0;
+    next.disabled = mobileIndex === cards.length - 1;
+  }
+  prev.addEventListener('click', function () { if (mobileIndex > 0) { mobileIndex--; updateMobile(); } });
+  next.addEventListener('click', function () { if (mobileIndex < activeCards().length - 1) { mobileIndex++; updateMobile(); } });
+  updateMobile();
+
+  // ---------- Inspiration gallery ----------
+  var thumbs = document.querySelectorAll('.thumb');
+  var inspSlides = document.querySelectorAll('.insp-slide');
+  var inspIndex = 0;
+  function showInsp(i) {
+    thumbs[inspIndex].classList.remove('is-active');
+    inspSlides[inspIndex].classList.remove('is-active');
+    inspIndex = i;
+    thumbs[i].classList.add('is-active');
+    inspSlides[i].classList.add('is-active');
+  }
+  thumbs.forEach(function (t, i) { t.addEventListener('click', function () { showInsp(i); }); });
+  setInterval(function () { showInsp((inspIndex + 1) % thumbs.length); }, 5000);
+
+  // ---------- Reveal on scroll ----------
+  var reveal = document.querySelectorAll('.discovery__tabs, .card, .inspiration__main, .inspiration__side, .feat, .footer__top > *, .footer__main > *');
   if ('IntersectionObserver' in window) {
+    reveal.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('is-visible');
-        var n = e.target.querySelector && e.target.querySelector('[data-count]');
-        if (n) countUp(n);
-        io.unobserve(e.target);
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.15 });
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-    document.querySelectorAll('[data-count]').forEach(function (n) { n.textContent = n.dataset.count; });
+    }, { threshold: 0.1 });
+    reveal.forEach(function (el) { io.observe(el); });
   }
 
-  // Contact form (front-end only — connect to your backend / email service)
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
+  // ---------- Newsletter ----------
+  document.getElementById('newsletter').addEventListener('submit', function (e) {
     e.preventDefault();
-    document.getElementById('formMsg').textContent = 'Merci ! Votre demande a bien été envoyée. Nous vous recontactons sous 24 h.';
+    document.getElementById('newsletterNote').textContent = 'Merci ! Votre inscription est bien enregistrée.';
     this.reset();
   });
 

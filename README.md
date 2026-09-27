@@ -11,9 +11,9 @@ python3 -m http.server 8000
 ```
 
 ## Structure
-- `index.html`: page content (hero slider, collections, inspirations, projects, company, showrooms, contact, footer)
+- `index.html`: page content (menu, hero video, full-screen slider, effects/collections cards, inspiration gallery, catalogue cards, footer)
 - `css/style.css`: styles (colors and fonts are set at the top in `:root`)
-- `js/main.js`: slider, mobile menu, search, collection filters, carousel, scroll animations
+- `js/main.js`: drop-down menu, video and slider controls, tabs, inspiration gallery, scroll animations
 - `images/`: put your own photos here
 
 ## Adding your own photos
@@ -24,13 +24,11 @@ To use real photos, put them in `images/` and override the class, for example:
 .tile--marble { background: url('../images/marble.jpg') center / cover; }
 ```
 
-For the hero slider, edit `--img-hero-1`, `--img-hero-2` and `--img-hero-3` in `:root`:
+Hero video: put a muted MP4 at `images/hero.mp4`.
 
-```css
---img-hero-1: url('../images/hero-1.jpg');
-```
+Logo: in `index.html`, replace the `<span class="logo-text">` in the header and footer with `<img src="images/logo.svg" alt="Sanitaire 2000">`.
 
 ## To complete
-- Showroom addresses and phone numbers (the "Points de vente" section)
+- Address and phone number in the footer
 - Social media links in the footer
-- Connect the contact and newsletter forms to a backend or email service (for example Formspree or Netlify Forms)
+- Connect the newsletter form to a backend or email service (for example Formspree or Netlify Forms)

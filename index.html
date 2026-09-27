@@ -3,339 +3,229 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sanitaire 2000 — Céramique, carrelage & sanitaire</title>
+  <title>Sanitaire 2000 — Carrelage, céramique & sanitaire</title>
   <meta name="description" content="Sanitaire 2000 : carrelage, céramique et équipements sanitaires pour la maison et les projets professionnels.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== TOP BAR ===== -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span>Showroom ouvert du lundi au samedi · 9h – 19h</span>
-      <div class="topbar__links">
-        <a href="#contact">Espace pro</a>
-        <a href="#where">Points de vente</a>
-        <a href="#" class="lang">FR</a> / <a href="#" class="lang">AR</a> / <a href="#" class="lang">EN</a>
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="nav">
+    <!-- Replace the text logo with your image: <img src="images/logo.svg" alt="Sanitaire 2000"> -->
+    <a href="#" class="nav__logo" aria-label="Sanitaire 2000 — accueil">
+      <span class="logo-text">sanitaire<b>2000</b></span>
+    </a>
+
+    <nav class="menu" aria-label="Menu principal">
+      <div class="menu__item">
+        <button class="menu__btn" aria-expanded="false" data-panel="p-produits">Produits <i class="plus"></i></button>
       </div>
-    </div>
-  </div>
-
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#" class="logo" aria-label="Sanitaire 2000 accueil">
-        <span class="logo__mark">S</span>
-        <span class="logo__text">SANITAIRE<b>2000</b></span>
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Navigation principale">
-        <ul>
-          <li class="has-mega">
-            <a href="#collections">Produits</a>
-            <div class="mega">
-              <div class="mega__col">
-                <h4>Carrelage</h4>
-                <a href="#collections">Effet marbre</a>
-                <a href="#collections">Effet bois</a>
-                <a href="#collections">Effet pierre</a>
-                <a href="#collections">Effet béton</a>
-                <a href="#collections">Grands formats</a>
-              </div>
-              <div class="mega__col">
-                <h4>Sanitaire</h4>
-                <a href="#collections">Vasques & lavabos</a>
-                <a href="#collections">WC suspendus</a>
-                <a href="#collections">Receveurs de douche</a>
-                <a href="#collections">Robinetterie</a>
-                <a href="#collections">Meubles de salle de bain</a>
-              </div>
-              <div class="mega__col">
-                <h4>Par espace</h4>
-                <a href="#inspiration">Salle de bain</a>
-                <a href="#inspiration">Cuisine</a>
-                <a href="#inspiration">Séjour</a>
-                <a href="#inspiration">Extérieur</a>
-              </div>
-              <div class="mega__feature">
-                <div class="tile tile--marble"></div>
-                <p>Nouvelle collection <strong>Atlas Marble</strong></p>
-              </div>
-            </div>
-          </li>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#inspiration">Inspirations</a></li>
-          <li><a href="#projects">Réalisations</a></li>
-          <li><a href="#about">L'entreprise</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__actions">
-        <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
-          <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <a href="#where" class="btn btn--outline btn--sm hide-mobile">Trouver un revendeur</a>
-        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="menu__item">
+        <button class="menu__btn" aria-expanded="false" data-panel="p-collections">Collections <i class="plus"></i></button>
       </div>
-    </div>
-
-    <div class="search" id="search">
-      <div class="container">
-        <input type="search" placeholder="Rechercher une collection, un produit, une finition…" aria-label="Recherche">
+      <div class="menu__item">
+        <button class="menu__btn" aria-expanded="false" data-panel="p-entreprise">Entreprise <i class="plus"></i></button>
       </div>
-    </div>
+      <div class="menu__item menu__item--single">
+        <a class="menu__btn" href="#downloads">Téléchargements</a>
+      </div>
+
+      <!-- Drop-down panels -->
+      <div class="panel" id="p-produits" hidden>
+        <a href="#effects">Effet béton</a>
+        <a href="#effects">Effet marbre</a>
+        <a href="#effects">Effet pierre</a>
+        <a href="#effects">Effet bois</a>
+        <a href="#effects">Effet contemporain</a>
+        <a href="#effects">Sanitaire & robinetterie</a>
+      </div>
+      <div class="panel" id="p-collections" hidden>
+        <a href="#effects" data-tab-link="collections">Atlas</a>
+        <a href="#effects" data-tab-link="collections">Médina</a>
+        <a href="#effects" data-tab-link="collections">Cèdre</a>
+        <a href="#effects" data-tab-link="collections">Urban</a>
+        <a href="#effects" data-tab-link="collections">Pure Bath</a>
+        <a href="#effects" data-tab-link="collections">Toutes les collections</a>
+      </div>
+      <div class="panel" id="p-entreprise" hidden>
+        <a href="#about">Qui sommes-nous</a>
+        <a href="#inspiration">Réalisations</a>
+        <a href="#footer">Points de vente</a>
+        <a href="#footer">Contacts</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- ===== HERO SLIDER ===== -->
-  <section class="hero" id="hero">
-    <div class="hero__slide is-active" style="--bg: var(--img-hero-1)">
-      <div class="container hero__content">
-        <p class="eyebrow">Nouveauté 2026</p>
-        <h1>Atlas Marble</h1>
-        <p class="hero__text">La noblesse du marbre, la résistance de la céramique. Grands formats pour des espaces sans limites.</p>
-        <a href="#collections" class="btn btn--light">Découvrir la collection</a>
-      </div>
-    </div>
-    <div class="hero__slide" style="--bg: var(--img-hero-2)">
-      <div class="container hero__content">
-        <p class="eyebrow">Salle de bain</p>
-        <h1>Pure Bath</h1>
-        <p class="hero__text">Vasques, WC suspendus et robinetterie : une ligne épurée pensée pour le quotidien.</p>
-        <a href="#inspiration" class="btn btn--light">Voir les inspirations</a>
-      </div>
-    </div>
-    <div class="hero__slide" style="--bg: var(--img-hero-3)">
-      <div class="container hero__content">
-        <p class="eyebrow">Effet bois</p>
-        <h1>Cèdre</h1>
-        <p class="hero__text">La chaleur du bois naturel, sans l'entretien. Pour l'intérieur comme pour l'extérieur.</p>
-        <a href="#collections" class="btn btn--light">Découvrir</a>
-      </div>
-    </div>
+  <main>
 
-    <div class="hero__controls container">
-      <div class="hero__dots" id="heroDots"></div>
-      <div class="hero__arrows">
-        <button id="heroPrev" aria-label="Précédent">&#8592;</button>
-        <button id="heroNext" aria-label="Suivant">&#8594;</button>
+    <!-- ================= 1. HERO (video) ================= -->
+    <section class="hero" id="about">
+      <!-- Put your video in images/hero.mp4 (muted loop). The poster/gradient shows until then. -->
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="">
+        <source src="images/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__shade"></div>
+      <div class="hero__inner">
+        <h1 class="hero__title">La matière au cœur de chaque projet.</h1>
+        <p class="hero__text">Sanitaire 2000 accompagne particuliers et professionnels depuis plus de vingt-cinq ans. Carrelage, céramique et équipements sanitaires : une sélection exigeante, un conseil sur mesure et un service fiable, du showroom jusqu'au chantier.</p>
       </div>
-    </div>
-    <a href="#intro" class="hero__scroll" aria-label="Défiler">Défiler</a>
-  </section>
+      <button class="play-toggle" id="videoToggle" aria-label="Pause la vidéo"><span></span></button>
+    </section>
 
-  <!-- ===== INTRO ===== -->
-  <section class="intro section" id="intro">
-    <div class="container intro__grid">
-      <p class="eyebrow">Depuis 2000</p>
-      <h2 class="display">Des surfaces qui racontent votre façon d'habiter.</h2>
-      <p class="lead">Sanitaire 2000 sélectionne et distribue des carrelages, des céramiques et des équipements sanitaires de haute qualité. Nous accompagnons les particuliers, les architectes et les entreprises du bâtiment, du choix des matières jusqu'à la pose.</p>
-      <a href="#about" class="link-arrow">L'entreprise</a>
-    </div>
-  </section>
+    <!-- ================= 2. FULL-SCREEN SLIDER ================= -->
+    <section class="slider" id="slider" aria-roledescription="carrousel">
+      <div class="slider__track">
+        <div class="slider__slide is-active" data-name="Atlas"><div class="media tile tile--marble-warm"></div></div>
+        <div class="slider__slide" data-name="Médina"><div class="media tile tile--terracotta"></div></div>
+        <div class="slider__slide" data-name="Cèdre"><div class="media tile tile--wood"></div></div>
+        <div class="slider__slide" data-name="Urban"><div class="media tile tile--concrete"></div></div>
+      </div>
+      <div class="slider__shade"></div>
+      <h2 class="slider__titles" id="sliderTitles"></h2>
+      <button class="play-toggle" id="sliderToggle" aria-label="Pause le carrousel"><span></span></button>
+    </section>
 
-  <!-- ===== COLLECTIONS ===== -->
-  <section class="collections section" id="collections">
-    <div class="container">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Collections</p>
-          <h2 class="title">Trouvez votre matière</h2>
+    <!-- ================= 3. EFFECTS / COLLECTIONS ================= -->
+    <section class="discovery" id="effects">
+      <div class="discovery__tabs" role="tablist">
+        <button role="tab" class="tab is-active" data-tab="effects" aria-selected="true">Effets</button>
+        <button role="tab" class="tab" data-tab="collections" aria-selected="false">Collections</button>
+      </div>
+
+      <div class="discovery__body">
+        <button class="arrow arrow--prev" aria-label="Précédent">&#8249;</button>
+
+        <div class="cards is-active" data-group="effects">
+          <a href="#" class="card"><div class="card__media tile tile--concrete-light"></div><h3>Béton</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--pattern"></div><h3>Contemporain</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--stone"></div><h3>Pierre</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--marble"></div><h3>Marbre</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--wood-light"></div><h3>Bois</h3></a>
         </div>
-        <div class="filters" id="filters">
-          <button class="is-active" data-filter="all">Tout</button>
-          <button data-filter="marbre">Marbre</button>
-          <button data-filter="bois">Bois</button>
-          <button data-filter="pierre">Pierre</button>
-          <button data-filter="beton">Béton</button>
-          <button data-filter="sanitaire">Sanitaire</button>
+
+        <div class="cards" data-group="collections">
+          <a href="#" class="card"><div class="card__media tile tile--marble-warm"></div><h3>Atlas</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--terracotta"></div><h3>Médina</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--wood"></div><h3>Cèdre</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--concrete"></div><h3>Urban</h3></a>
+          <a href="#" class="card"><div class="card__media tile tile--ceramic"></div><h3>Pure Bath</h3></a>
         </div>
+
+        <button class="arrow arrow--next" aria-label="Suivant">&#8250;</button>
       </div>
 
-      <div class="grid" id="grid">
-        <a href="#" class="card" data-cat="marbre">
-          <div class="card__img tile tile--marble"></div>
-          <div class="card__body"><span>Effet marbre</span><h3>Atlas Marble</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="bois">
-          <div class="card__img tile tile--wood"></div>
-          <div class="card__body"><span>Effet bois</span><h3>Cèdre</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="pierre">
-          <div class="card__img tile tile--stone"></div>
-          <div class="card__body"><span>Effet pierre</span><h3>Tafraout</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="beton">
-          <div class="card__img tile tile--concrete"></div>
-          <div class="card__body"><span>Effet béton</span><h3>Urban Grey</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="marbre">
-          <div class="card__img tile tile--marble-dark"></div>
-          <div class="card__body"><span>Effet marbre</span><h3>Noir Royal</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="sanitaire">
-          <div class="card__img tile tile--ceramic"></div>
-          <div class="card__body"><span>Sanitaire</span><h3>Pure Bath</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="pierre">
-          <div class="card__img tile tile--terracotta"></div>
-          <div class="card__body"><span>Effet terre cuite</span><h3>Zellige Terra</h3></div>
-        </a>
-        <a href="#" class="card" data-cat="bois">
-          <div class="card__img tile tile--wood-light"></div>
-          <div class="card__body"><span>Effet bois</span><h3>Chêne Blond</h3></div>
-        </a>
-      </div>
+      <div class="discovery__more"><a href="#" class="u-link">Voir tous les produits</a></div>
+    </section>
 
-      <div class="center"><a href="#" class="btn btn--dark">Toutes les collections</a></div>
-    </div>
-  </section>
-
-  <!-- ===== SPLIT FEATURE ===== -->
-  <section class="split">
-    <div class="split__img tile tile--marble-warm"></div>
-    <div class="split__text">
-      <p class="eyebrow">Grands formats</p>
-      <h2 class="title">120 × 280 cm.<br>Moins de joints, plus d'espace.</h2>
-      <p>Nos dalles grand format transforment sols, murs, plans de travail et façades en surfaces continues. Une épaisseur réduite, une résistance élevée et un entretien minimal.</p>
-      <ul class="specs">
-        <li><strong>6 mm</strong><span>Épaisseur</span></li>
-        <li><strong>R10</strong><span>Antidérapant</span></li>
-        <li><strong>0,5 %</strong><span>Absorption</span></li>
-      </ul>
-      <a href="#collections" class="link-arrow">En savoir plus</a>
-    </div>
-  </section>
-
-  <!-- ===== INSPIRATIONS ===== -->
-  <section class="inspiration section" id="inspiration">
-    <div class="container">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Inspirations</p>
-          <h2 class="title">Idées pour chaque espace</h2>
+    <!-- ================= 4. INSPIRATION (dark) ================= -->
+    <section class="inspiration" id="inspiration">
+      <div class="inspiration__grid">
+        <div class="inspiration__main">
+          <div class="insp-slide is-active tile tile--stone-room"></div>
+          <div class="insp-slide tile tile--bath-room"></div>
+          <div class="insp-slide tile tile--wood-room"></div>
         </div>
-        <a href="#" class="link-arrow">Toutes les inspirations</a>
-      </div>
-      <div class="mosaic">
-        <a href="#" class="mosaic__item mosaic__item--tall tile tile--ceramic"><span>Salle de bain</span></a>
-        <a href="#" class="mosaic__item tile tile--wood"><span>Séjour</span></a>
-        <a href="#" class="mosaic__item tile tile--concrete"><span>Cuisine</span></a>
-        <a href="#" class="mosaic__item mosaic__item--wide tile tile--stone"><span>Extérieur & piscine</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Réalisations</p>
-          <h2 class="title">Ils nous ont fait confiance</h2>
-        </div>
-        <div class="carousel__nav">
-          <button id="projPrev" aria-label="Précédent">&#8592;</button>
-          <button id="projNext" aria-label="Suivant">&#8594;</button>
+        <div class="inspiration__side">
+          <div class="inspiration__thumbs">
+            <button class="thumb is-active tile tile--stone-room" aria-label="Inspiration 1"></button>
+            <button class="thumb tile tile--bath-room" aria-label="Inspiration 2"></button>
+            <button class="thumb tile tile--wood-room" aria-label="Inspiration 3"></button>
+          </div>
+          <p class="inspiration__text">Chaque espace raconte une histoire. Salles de bain, cuisines, séjours ou terrasses : nous choisissons avec vous les surfaces qui donnent du caractère à votre lieu de vie et qui résistent au temps.</p>
         </div>
       </div>
-    </div>
-    <div class="carousel" id="projects-track">
-      <article class="project"><div class="project__img tile tile--marble"></div><span>Hôtel · Marrakech</span><h3>Riad Al Nour</h3></article>
-      <article class="project"><div class="project__img tile tile--terracotta"></div><span>Restaurant · Casablanca</span><h3>La Terrasse</h3></article>
-      <article class="project"><div class="project__img tile tile--concrete"></div><span>Bureaux · Rabat</span><h3>Tour Horizon</h3></article>
-      <article class="project"><div class="project__img tile tile--wood-light"></div><span>Villa privée · Tanger</span><h3>Villa Cap Spartel</h3></article>
-      <article class="project"><div class="project__img tile tile--marble-dark"></div><span>Boutique · Agadir</span><h3>Maison Argane</h3></article>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== ABOUT / NUMBERS ===== -->
-  <section class="about section" id="about">
-    <div class="container about__grid">
-      <div>
-        <p class="eyebrow">L'entreprise</p>
-        <h2 class="title">Plus de 25 ans au service de l'habitat</h2>
-        <p>Fondée en 2000, Sanitaire 2000 est devenue une référence de la distribution de carrelage et de sanitaire. Notre équipe vous conseille en showroom, prépare vos devis et coordonne la livraison sur chantier.</p>
-        <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
+    <!-- ================= 5. FEATURED CARDS ================= -->
+    <section class="featured" id="downloads">
+      <div class="featured__col">
+        <a href="#" class="feat">
+          <div class="feat__media feat__media--catalog">
+            <span class="feat__year">2026</span>
+            <span class="feat__name">SANITAIRE 2000</span>
+          </div>
+          <span class="u-link u-upper">Télécharger le catalogue</span>
+        </a>
       </div>
-      <ul class="numbers">
-        <li><strong data-count="25">0</strong><span>années d'expérience</span></li>
-        <li><strong data-count="1200">0</strong><span>références en stock</span></li>
-        <li><strong data-count="8500">0</strong><span>chantiers livrés</span></li>
-        <li><strong data-count="3">0</strong><span>showrooms</span></li>
-      </ul>
-    </div>
-  </section>
+      <div class="featured__col">
+        <a href="#" class="feat">
+          <div class="feat__media feat__media--event">
+            <span class="feat__big">NOUVEAU<br>SHOWROOM</span>
+            <span class="feat__small">Venez découvrir nos collections</span>
+          </div>
+          <span class="u-link u-upper">Nos showrooms</span>
+        </a>
+      </div>
+    </section>
 
-  <!-- ===== WHERE TO BUY ===== -->
-  <section class="where section" id="where">
-    <div class="container where__grid">
-      <div>
-        <p class="eyebrow">Points de vente</p>
-        <h2 class="title">Venez toucher la matière</h2>
-        <p>Retrouvez toutes nos collections exposées en taille réelle dans nos showrooms.</p>
-      </div>
-      <div class="stores">
-        <div class="store"><h4>Showroom Casablanca</h4><p>Adresse à compléter<br>+212 5 00 00 00 00</p></div>
-        <div class="store"><h4>Showroom Rabat</h4><p>Adresse à compléter<br>+212 5 00 00 00 00</p></div>
-        <div class="store"><h4>Showroom Marrakech</h4><p>Adresse à compléter<br>+212 5 00 00 00 00</p></div>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="contact section" id="contact">
-    <div class="container contact__grid">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2 class="title">Parlons de votre projet</h2>
-        <p>Particulier, architecte ou entreprise ? Envoyez-nous votre demande, nous vous répondons sous 24 h.</p>
-      </div>
-      <form class="form" id="contactForm">
-        <div class="form__row">
-          <label>Nom<input type="text" name="name" required></label>
-          <label>Téléphone<input type="tel" name="phone"></label>
-        </div>
-        <label>E-mail<input type="email" name="email" required></label>
-        <label>Profil
-          <select name="profile">
-            <option>Particulier</option><option>Architecte / Designer</option><option>Entreprise du bâtiment</option><option>Revendeur</option>
-          </select>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="footer">
+    <div class="footer__top">
+      <a href="#" class="footer__logo"><span class="logo-text logo-text--dark">sanitaire<b>2000</b></span></a>
+      <address class="footer__address">
+        Sanitaire 2000<br>
+        Carrelage · Céramique · Sanitaire<br>
+        Adresse à compléter<br>
+        Ville, Maroc<br>
+        Tél : +212 5 00 00 00 00
+      </address>
+      <div class="footer__badge">Depuis<br><strong>2000</strong></div>
+    </div>
+
+    <div class="footer__main">
+      <form class="newsletter" id="newsletter">
+        <p class="newsletter__intro">Inscrivez-vous à la newsletter pour recevoir nos nouveautés, collections et événements.</p>
+        <label class="newsletter__field">
+          <input type="email" required placeholder="Adresse e-mail *" aria-label="Adresse e-mail">
+          <button type="submit">Envoyer</button>
         </label>
-        <label>Message<textarea name="message" rows="4"></textarea></label>
-        <button type="submit" class="btn btn--dark">Envoyer</button>
-        <p class="form__msg" id="formMsg" role="status"></p>
+        <p class="newsletter__note" id="newsletterNote">En vous inscrivant, vous acceptez notre politique de confidentialité.</p>
       </form>
-    </div>
-  </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="newsletter">
-        <h3>Recevez nos nouveautés et inspirations</h3>
-        <form class="newsletter__form" onsubmit="event.preventDefault(); this.innerHTML='<p>Merci pour votre inscription.</p>';">
-          <input type="email" placeholder="Votre adresse e-mail" required aria-label="E-mail">
-          <button type="submit">S'inscrire</button>
-        </form>
-      </div>
-      <div class="footer__grid">
+      <nav class="footer__links">
         <div>
-          <a href="#" class="logo logo--light"><span class="logo__mark">S</span><span class="logo__text">SANITAIRE<b>2000</b></span></a>
-          <p class="footer__small">Carrelage, céramique & sanitaire depuis 2000.</p>
+          <a href="#about">Sanitaire 2000</a>
+          <a href="#effects">Collections</a>
+          <a href="#effects">Produits</a>
+          <a href="#effects">Effet béton</a>
+          <a href="#effects">Effet marbre</a>
+          <a href="#effects">Effet pierre</a>
+          <a href="#effects">Effet bois</a>
+          <a href="#effects">Sanitaire</a>
         </div>
-        <div><h4>Produits</h4><a href="#collections">Carrelage</a><a href="#collections">Sanitaire</a><a href="#collections">Robinetterie</a><a href="#collections">Meubles</a></div>
-        <div><h4>Entreprise</h4><a href="#about">Qui sommes-nous</a><a href="#projects">Réalisations</a><a href="#where">Showrooms</a><a href="#contact">Recrutement</a></div>
-        <div><h4>Services</h4><a href="#contact">Espace pro</a><a href="#contact">Catalogues PDF</a><a href="#contact">Devis</a><a href="#contact">Livraison</a></div>
-        <div><h4>Suivez-nous</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Pinterest</a><a href="#">LinkedIn</a></div>
-      </div>
-      <div class="footer__bottom">
-        <span>© <span id="year"></span> Sanitaire 2000. Tous droits réservés.</span>
-        <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a> · <a href="#">Cookies</a></span>
-      </div>
+        <div>
+          <a href="#">Contacts</a>
+          <a href="#">Points de vente</a>
+          <a href="#downloads">Télécharger le catalogue</a>
+          <a href="#">FAQ</a>
+          <span class="gap"></span>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Cookies</a>
+          <a href="#">Mentions légales</a>
+        </div>
+        <div>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Pinterest</a>
+        </div>
+        <div class="footer__lang">
+          <label class="lang">Langue :
+            <select aria-label="Langue"><option>FR</option><option>AR</option><option>EN</option></select>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <a href="#">Crédits</a>
+      <span>© <span id="year"></span> Sanitaire 2000 — Tous droits réservés</span>
     </div>
   </footer>
 
