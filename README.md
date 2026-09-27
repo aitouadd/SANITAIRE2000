@@ -32,3 +32,6 @@ Logo: in `index.html`, replace the `<span class="logo-text">` in the header and 
 - Address and phone number in the footer
 - Social media links in the footer
 - Connect the newsletter form to a backend or email service (for example Formspree or Netlify Forms)
+
+## Preview
+Screenshots are in `preview/` (desktop and phone).
