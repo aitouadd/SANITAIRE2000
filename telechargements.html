@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Téléchargements — Sanitaire 2000</title>
+  <meta name="description" content="Sanitaire 2000 : carrelage, céramique et équipements sanitaires pour la maison et les projets professionnels.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-light">
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="nav">
+    <!-- Replace the text logo with your image: <img src="images/logo.svg" alt="Sanitaire 2000"> -->
+    <a href="index.html" class="nav__logo" aria-label="Sanitaire 2000 — accueil">
+      <span class="logo-text">sanitaire<b>2000</b></span>
+    </a>
+
+    <nav class="menu" aria-label="Menu principal">
+      <div class="menu__item">
+        <button class="menu__btn" aria-expanded="false" data-panel="p-produits">Produits <i class="plus"></i></button>
+      </div>
+      <div class="menu__item">
+        <button class="menu__btn" aria-expanded="false" data-panel="p-collections">Collections <i class="plus"></i></button>
+      </div>
+      <div class="menu__item">
+        <button class="menu__btn" aria-expanded="false" data-panel="p-entreprise">Entreprise <i class="plus"></i></button>
+      </div>
+      <div class="menu__item menu__item--single">
+        <a class="menu__btn is-current" href="telechargements.html" aria-current="page">Téléchargements</a>
+      </div>
+
+      <!-- Drop-down panels -->
+    </nav>
+
+    <!-- Products mega-menu (full width) -->
+    <div class="mega mega--products" id="p-produits" hidden>
+      <div class="mega__col mega__col--catalog">
+        <a href="index.html#effects" class="mega__cover"><div class="mega__img tile tile--concrete"></div></a>
+        <a href="index.html#effects" class="mega__foot">Nouveauté · Urban · Gris <span class="ico">&#8594;</span></a>
+      </div>
+      <div class="mega__main">
+        <form class="mega__search" role="search" onsubmit="event.preventDefault()">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="2.2"/></svg>
+          <input type="search" placeholder="Rechercher un code produit…" aria-label="Rechercher un code produit">
+        </form>
+        <div class="mega__cols">
+          <div class="mega__col">
+            <p class="mega__head">Effet</p>
+            <nav class="mega__list" aria-label="Effet">
+            <a href="index.html#effects">Béton</a>
+            <a href="index.html#effects">Contemporain</a>
+            <a href="index.html#effects">Haute performance</a>
+            <a href="index.html#effects">Marbre</a>
+            <a href="index.html#effects">Pierre</a>
+            <a href="index.html#effects">Bois</a>
+            </nav>
+            <a href="index.html#effects" class="mega__foot">Tous les produits <span class="ico">&#8594;</span></a>
+          </div>
+          <div class="mega__col">
+            <p class="mega__head">Couleur</p>
+            <nav class="mega__list" aria-label="Couleur">
+            <a href="index.html#effects">Blanc</a>
+            <a href="index.html#effects">Beige</a>
+            <a href="index.html#effects">Jaune</a>
+            <a href="index.html#effects">Rouge</a>
+            <a href="index.html#effects">Bleu</a>
+            <a href="index.html#effects">Vert</a>
+            <a href="index.html#effects">Gris</a>
+            <a href="index.html#effects">Noir</a>
+            <a href="index.html#effects">Marron</a>
+            <a href="index.html#effects">Autres couleurs</a>
+            </nav>
+          </div>
+          <div class="mega__col">
+            <p class="mega__head">Usage</p>
+            <nav class="mega__list" aria-label="Usage">
+            <a href="index.html#effects">Intérieur</a>
+            <a href="index.html#effects">Extérieur</a>
+            </nav>
+          </div>
+          <div class="mega__col">
+            <p class="mega__head">Espace</p>
+            <nav class="mega__list" aria-label="Espace">
+            <a href="index.html#inspiration">Salle de bain</a>
+            <a href="index.html#inspiration">Cuisine</a>
+            <a href="index.html#inspiration">Sanitaire & robinetterie</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company mega-menu (full width) -->
+    <div class="mega mega--company" id="p-entreprise" hidden>
+      <div class="mega__col">
+        <!-- Replace with a photo of your showroom/building: images/showroom.jpg -->
+        <a href="index.html#about" class="mega__cover"><div class="mega__img tile tile--building"></div></a>
+      </div>
+      <div class="mega__col">
+        <p class="mega__head">Découvrir</p>
+        <nav class="mega__list" aria-label="Découvrir">
+          <a href="index.html#about">Qui sommes-nous</a>
+          <a href="index.html#inspiration">Nos réalisations</a>
+          <a href="index.html#about">Certifications</a>
+        </nav>
+        <a href="index.html#footer" class="mega__foot">Contactez-nous <span class="ico">&#8594;</span></a>
+      </div>
+      <div class="mega__col">
+        <p class="mega__head">Points de vente</p>
+        <div class="map" aria-label="Carte des points de vente">
+          <svg class="map__roads" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g fill="none" stroke="#d9d9de" stroke-width="1">
+              <path d="M-10 60 C80 70 150 40 230 80 S360 120 420 100"/>
+              <path d="M-10 190 C60 170 140 200 210 160 S330 150 420 210"/>
+              <path d="M40 -10 C60 80 30 160 70 310"/>
+              <path d="M150 -10 C170 60 140 150 180 220 S170 290 190 310"/>
+              <path d="M300 -10 C280 70 320 130 290 200 S310 280 300 310"/>
+              <path d="M-10 250 L420 260"/>
+              <path d="M90 -10 L360 310"/>
+              <path d="M230 -10 C250 40 350 60 420 40"/>
+              <path d="M-10 120 C100 130 180 110 260 140 S380 170 420 160"/>
+            </g>
+            <g fill="none" stroke="#c9c9cf" stroke-width="2.2">
+              <path d="M-10 230 C100 200 190 150 260 120 S360 70 420 60"/>
+              <path d="M120 310 C150 220 190 160 210 100 S230 20 250 -10"/>
+            </g>
+            <path d="M-10 280 C40 270 70 290 110 275 S150 300 170 310" fill="none" stroke="#bfb0c8" stroke-dasharray="3 3"/>
+          </svg>
+          <div class="map__card">
+            <strong>SHOWROOM SANITAIRE 2000</strong>
+            <span>Adresse à compléter, Ville</span>
+          </div>
+          <span class="map__pin" aria-hidden="true"></span>
+        </div>
+        <a href="index.html#footer" class="mega__foot">Trouver un revendeur <span class="ico">&#8594;</span></a>
+      </div>
+    </div>
+
+    <!-- Collections mega-menu (full width) -->
+    <div class="mega" id="p-collections" hidden>
+      <div class="mega__col mega__col--catalog">
+        <a href="telechargements.html#catalogue-general" class="mega__cover">
+          <div class="cover">
+            <div class="cover__tiles"><span></span><span></span><span></span><span></span></div>
+            <div class="cover__text"><small>2026</small><strong>SANITAIRE 2000</strong><small>Catalogue général</small></div>
+          </div>
+        </a>
+        <a href="telechargements.html#catalogue-general" class="mega__foot">Télécharger le catalogue <span class="ico">&#8595;</span></a>
+      </div>
+      <div class="mega__col">
+        <p class="mega__head">Index</p>
+        <nav class="mega__list mega__list--scroll" aria-label="Index des collections">
+            <a href="index.html#effects" data-tab-link="collections">Alba</a>
+            <a href="index.html#effects" data-tab-link="collections">Ambre</a>
+            <a href="index.html#effects" data-tab-link="collections">Andalous</a>
+            <a href="index.html#effects" data-tab-link="collections">Argan</a>
+            <a href="index.html#effects" data-tab-link="collections">Atlas</a>
+            <a href="index.html#effects" data-tab-link="collections">Atlas Rock</a>
+            <a href="index.html#effects" data-tab-link="collections">Azur</a>
+            <a href="index.html#effects" data-tab-link="collections">Basalte</a>
+            <a href="index.html#effects" data-tab-link="collections">Bois Flotté</a>
+            <a href="index.html#effects" data-tab-link="collections">Cèdre</a>
+            <a href="index.html#effects" data-tab-link="collections">Chêne Blond</a>
+            <a href="index.html#effects" data-tab-link="collections">Craie</a>
+            <a href="index.html#effects" data-tab-link="collections">Dune</a>
+            <a href="index.html#effects" data-tab-link="collections">Essaouira</a>
+            <a href="index.html#effects" data-tab-link="collections">Fès</a>
+            <a href="index.html#effects" data-tab-link="collections">Granit Noir</a>
+            <a href="index.html#effects" data-tab-link="collections">Ivoire</a>
+            <a href="index.html#effects" data-tab-link="collections">Kasbah</a>
+            <a href="index.html#effects" data-tab-link="collections">Médina</a>
+            <a href="index.html#effects" data-tab-link="collections">Mogador</a>
+            <a href="index.html#effects" data-tab-link="collections">Noir Royal</a>
+            <a href="index.html#effects" data-tab-link="collections">Oasis</a>
+            <a href="index.html#effects" data-tab-link="collections">Onyx</a>
+            <a href="index.html#effects" data-tab-link="collections">Pure Bath</a>
+            <a href="index.html#effects" data-tab-link="collections">Riad</a>
+            <a href="index.html#effects" data-tab-link="collections">Sable</a>
+            <a href="index.html#effects" data-tab-link="collections">Tadelakt</a>
+            <a href="index.html#effects" data-tab-link="collections">Tafraout</a>
+            <a href="index.html#effects" data-tab-link="collections">Travertin</a>
+            <a href="index.html#effects" data-tab-link="collections">Urban</a>
+            <a href="index.html#effects" data-tab-link="collections">Urban Grey</a>
+            <a href="index.html#effects" data-tab-link="collections">Volubilis</a>
+            <a href="index.html#effects" data-tab-link="collections">Zellige Terra</a>
+        </nav>
+        <a href="index.html#effects" class="mega__foot" data-tab-link="collections">Toutes les collections <span class="ico">&#8594;</span></a>
+      </div>
+      <div class="mega__col">
+        <p class="mega__head">Inspirations</p>
+        <nav class="mega__list" aria-label="Inspirations">
+          <a href="index.html#inspiration">Intérieur</a>
+          <a href="index.html#inspiration">Extérieur</a>
+          <span class="mega__sep">-</span>
+          <a href="index.html#inspiration">Salle de bain</a>
+          <a href="index.html#inspiration">Chambre</a>
+          <a href="index.html#inspiration">Cuisine</a>
+          <a href="index.html#inspiration">Séjour</a>
+          <a href="index.html#inspiration">Terrasse & piscine</a>
+          <a href="index.html#inspiration">Commercial</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="dl">
+    <header class="dl-intro">
+      <h1 class="dl-intro__title">Téléchargements</h1>
+      <p class="dl-intro__text">Retrouvez ici nos catalogues, fiches techniques, guides de pose et certifications, à télécharger gratuitement au format PDF.</p>
+    </header>
+
+    <div class="dl-layout">
+      <nav class="dl-side" aria-label="Sections">
+        <ul>
+          <li><a href="#catalogues">Catalogues des collections</a></li>
+          <li><a href="#fiches">Fiches techniques</a></li>
+          <li><a href="#guides">Guides de pose & entretien</a></li>
+          <li><a href="#catalogue-general">Catalogue général</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+        </ul>
+      </nav>
+      <div class="dl-content">
+        <section class="dl-section" id="catalogues">
+          <h2 class="dl-section__title">Catalogues des collections</h2>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-0">Alba<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-0" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-1">Ambre<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-1" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-2">Andalous<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-2" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-3">Argan<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-3" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-4">Atlas<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-4" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-5">Atlas Rock<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-5" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-6">Azur<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-6" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-7">Basalte<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-7" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-8">Bois Flotté<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-8" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-9">Cèdre<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-9" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-10">Chêne Blond<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-10" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-11">Craie<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-11" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-12">Dune<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-12" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-13">Essaouira<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-13" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-14">Fès<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-14" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-15">Granit Noir<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-15" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-16">Ivoire<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-16" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-17">Kasbah<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-17" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-18">Médina<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-18" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-19">Mogador<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-19" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-20">Noir Royal<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-20" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-21">Oasis<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-21" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-22">Onyx<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-22" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-23">Pure Bath<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-23" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-24">Riad<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-24" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-25">Sable<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-25" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-26">Tadelakt<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-26" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-27">Tafraout<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-27" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-28">Travertin<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-28" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-29">Urban<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-29" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-30">Urban Grey<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-30" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-31">Volubilis<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-31" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cat-32">Zellige Terra<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cat-32" hidden>
+              <li><a href="#" download>Catalogue — Français <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — English <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Catalogue — العربية <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="dl-section" id="fiches">
+          <h2 class="dl-section__title">Fiches techniques</h2>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-0">Alba<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-0" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-1">Ambre<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-1" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-2">Andalous<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-2" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-3">Argan<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-3" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-4">Atlas<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-4" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-5">Atlas Rock<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-5" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-6">Azur<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-6" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-7">Basalte<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-7" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-8">Bois Flotté<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-8" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-9">Cèdre<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-9" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-10">Chêne Blond<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-10" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-11">Craie<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-11" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-12">Dune<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-12" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-13">Essaouira<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-13" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-14">Fès<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-14" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-15">Granit Noir<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-15" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-16">Ivoire<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-16" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-17">Kasbah<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-17" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-18">Médina<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-18" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-19">Mogador<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-19" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-20">Noir Royal<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-20" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-21">Oasis<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-21" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-22">Onyx<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-22" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-23">Pure Bath<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-23" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-24">Riad<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-24" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-25">Sable<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-25" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-26">Tadelakt<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-26" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-27">Tafraout<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-27" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-28">Travertin<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-28" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-29">Urban<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-29" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-30">Urban Grey<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-30" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-31">Volubilis<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-31" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ft-32">Zellige Terra<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ft-32" hidden>
+              <li><a href="#" download>Fiche technique <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+              <li><a href="#" download>Tableau des formats et finitions <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="dl-section" id="guides">
+          <h2 class="dl-section__title">Guides de pose & entretien</h2>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="gp-0">Carrelage intérieur<i class="plus"></i></button>
+            <ul class="dl-row__files" id="gp-0" hidden>
+              <li><a href="#" download>Guide PDF <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="gp-1">Carrelage extérieur<i class="plus"></i></button>
+            <ul class="dl-row__files" id="gp-1" hidden>
+              <li><a href="#" download>Guide PDF <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="gp-2">Grands formats<i class="plus"></i></button>
+            <ul class="dl-row__files" id="gp-2" hidden>
+              <li><a href="#" download>Guide PDF <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="gp-3">Salle de bain & douche à l'italienne<i class="plus"></i></button>
+            <ul class="dl-row__files" id="gp-3" hidden>
+              <li><a href="#" download>Guide PDF <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="gp-4">Entretien du grès cérame<i class="plus"></i></button>
+            <ul class="dl-row__files" id="gp-4" hidden>
+              <li><a href="#" download>Guide PDF <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="gp-5">Entretien de la robinetterie<i class="plus"></i></button>
+            <ul class="dl-row__files" id="gp-5" hidden>
+              <li><a href="#" download>Guide PDF <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="dl-section" id="catalogue-general">
+          <h2 class="dl-section__title">Catalogue général</h2>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cg-0">Catalogue général 2026<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cg-0" hidden>
+              <li><a href="#" download>Télécharger <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cg-1">Catalogue sanitaire & robinetterie 2026<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cg-1" hidden>
+              <li><a href="#" download>Télécharger <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="cg-2">Liste de prix professionnels<i class="plus"></i></button>
+            <ul class="dl-row__files" id="cg-2" hidden>
+              <li><a href="#" download>Télécharger <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="dl-section" id="certifications">
+          <h2 class="dl-section__title">Certifications</h2>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ce-0">Marquage CE<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ce-0" hidden>
+              <li><a href="#" download>Télécharger <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ce-1">Normes ISO<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ce-1" hidden>
+              <li><a href="#" download>Télécharger <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+          <div class="dl-row">
+            <button class="dl-row__btn" aria-expanded="false" aria-controls="ce-2">Déclarations de performance (DoP)<i class="plus"></i></button>
+            <ul class="dl-row__files" id="ce-2" hidden>
+              <li><a href="#" download>Télécharger <span class="dl-meta">PDF</span><span class="ico">&#8595;</span></a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="footer">
+    <div class="footer__top">
+      <a href="index.html" class="footer__logo"><span class="logo-text logo-text--dark">sanitaire<b>2000</b></span></a>
+      <address class="footer__address">
+        Sanitaire 2000<br>
+        Carrelage · Céramique · Sanitaire<br>
+        Adresse à compléter<br>
+        Ville, Maroc<br>
+        Tél : +212 5 00 00 00 00
+      </address>
+      <div class="footer__badge">Depuis<br><strong>2000</strong></div>
+    </div>
+
+    <div class="footer__main">
+      <form class="newsletter" id="newsletter">
+        <p class="newsletter__intro">Inscrivez-vous à la newsletter pour recevoir nos nouveautés, collections et événements.</p>
+        <label class="newsletter__field">
+          <input type="email" required placeholder="Adresse e-mail *" aria-label="Adresse e-mail">
+          <button type="submit">Envoyer</button>
+        </label>
+        <p class="newsletter__note" id="newsletterNote">En vous inscrivant, vous acceptez notre politique de confidentialité.</p>
+      </form>
+
+      <nav class="footer__links">
+        <div>
+          <a href="index.html#about">Sanitaire 2000</a>
+          <a href="index.html#effects">Collections</a>
+          <a href="index.html#effects">Produits</a>
+          <a href="index.html#effects">Effet béton</a>
+          <a href="index.html#effects">Effet marbre</a>
+          <a href="index.html#effects">Effet pierre</a>
+          <a href="index.html#effects">Effet bois</a>
+          <a href="index.html#effects">Sanitaire</a>
+        </div>
+        <div>
+          <a href="#">Contacts</a>
+          <a href="#">Points de vente</a>
+          <a href="telechargements.html">Télécharger le catalogue</a>
+          <a href="#">FAQ</a>
+          <span class="gap"></span>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Cookies</a>
+          <a href="#">Mentions légales</a>
+        </div>
+        <div>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Pinterest</a>
+        </div>
+        <div class="footer__lang">
+          <label class="lang">Langue :
+            <select aria-label="Langue"><option>FR</option><option>AR</option><option>EN</option></select>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <a href="#">Crédits</a>
+      <span>© <span id="year"></span> Sanitaire 2000 — Tous droits réservés</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

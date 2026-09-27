@@ -44,6 +44,43 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // ---------- Newsletter ----------
+  document.getElementById('newsletter').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('newsletterNote').textContent = 'Merci ! Votre inscription est bien enregistrée.';
+    this.reset();
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- Downloads page: accordions + sidebar ----------
+  var dl = document.querySelector('.dl');
+  if (dl) {
+    dl.querySelectorAll('.dl-row__btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') !== 'true';
+        btn.setAttribute('aria-expanded', open);
+        document.getElementById(btn.getAttribute('aria-controls')).hidden = !open;
+      });
+    });
+    var sideLinks = document.querySelectorAll('.dl-side a');
+    var sections = document.querySelectorAll('.dl-section');
+    function setActive() {
+      var current = sections[0];
+      sections.forEach(function (s) { if (s.getBoundingClientRect().top < window.innerHeight * 0.35) current = s; });
+      sideLinks.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + current.id;
+        a.classList.toggle('is-active', on);
+        if (on && window.innerWidth <= 768) a.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      });
+    }
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+  }
+
+  // Everything below only exists on the home page
+  if (!document.querySelector('.hero')) return;
+
   // ---------- Hero video play/pause ----------
   var video = document.querySelector('.hero__video');
   var vBtn = document.getElementById('videoToggle');
@@ -142,12 +179,4 @@
     reveal.forEach(function (el) { io.observe(el); });
   }
 
-  // ---------- Newsletter ----------
-  document.getElementById('newsletter').addEventListener('submit', function (e) {
-    e.preventDefault();
-    document.getElementById('newsletterNote').textContent = 'Merci ! Votre inscription est bien enregistrée.';
-    this.reset();
-  });
-
-  document.getElementById('year').textContent = new Date().getFullYear();
 })();

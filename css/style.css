@@ -324,6 +324,48 @@ h1, h2, h3, p { margin: 0; }
 
 .footer__bottom { display: flex; justify-content: space-between; gap: var(--s4); padding-top: var(--s10); font-weight: 600; }
 
+/* ---------------- Downloads page ---------------- */
+.page-light .nav__logo .logo-text { color: var(--grey-900); }
+.page-light .nav.is-scrolled .nav__logo { opacity: 0; }
+.menu__btn.is-current { background: var(--grey-600); }
+
+.dl { padding: 0 var(--s4) var(--s10); }
+.dl-intro {
+  margin-left: calc(33.333% + .5rem); padding-top: 11rem; min-height: 26rem;
+  border-top: 1px solid var(--grey-900); background-clip: content-box;
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6); align-content: start;
+  position: relative;
+}
+.dl-intro::before { content: ""; position: absolute; left: 0; right: 0; top: 11rem; border-top: 1px solid var(--grey-900); }
+.dl-intro { border-top: 0; padding-top: calc(11rem + 1.5rem); }
+.dl-intro__title { font-size: var(--fs-display); font-weight: 700; letter-spacing: -.03em; line-height: 1; }
+.dl-intro__text { font-size: 1.25rem; font-weight: 700; line-height: 1.1; letter-spacing: -.01em; }
+
+.dl-layout { display: grid; grid-template-columns: 1fr 2fr; gap: .5rem; align-items: start; }
+.dl-side { position: sticky; top: var(--s4); }
+.dl-side ul { list-style: none; margin: 0; padding: 0; }
+.dl-side a { display: flex; align-items: center; gap: .75rem; font-size: 1.25rem; font-weight: 700; color: var(--grey-600); padding: .12rem 0; transition: color .2s; }
+.dl-side a::before { content: ""; width: .75rem; height: .75rem; background: var(--grey-900); flex: none; opacity: 0; }
+.dl-side a:hover, .dl-side a.is-active { color: var(--grey-900); }
+.dl-side a.is-active::before { opacity: 1; }
+
+.dl-section { scroll-margin-top: var(--s4); padding-bottom: var(--s10); }
+.dl-section__title { font-size: 1.75rem; font-weight: 700; letter-spacing: -.02em; margin-bottom: var(--s7); }
+.dl-row { border-bottom: 1px solid var(--grey-900); }
+.dl-row__btn {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left;
+  padding: 1.35rem 0; font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em;
+}
+.dl-row__btn .plus { width: 12px; height: 12px; opacity: 0; transition: opacity .2s; }
+.dl-row__btn .plus::before, .dl-row__btn .plus::after { width: 12px; top: 5.5px; height: 1.5px; }
+.dl-row__btn:hover .plus, .dl-row__btn[aria-expanded="true"] .plus { opacity: 1; }
+.dl-row__files { list-style: none; margin: 0; padding: 0 0 1.25rem; animation: drop .35s var(--ease); }
+.dl-row__files[hidden] { display: none; }
+.dl-row__files a { display: flex; align-items: center; gap: .75rem; padding: .45rem 0; font-size: 1rem; }
+.dl-row__files a:hover { text-decoration: underline; }
+.dl-meta { font-size: .7rem; font-weight: 700; background: var(--grey-200); padding: .1rem .35rem; }
+.dl-row__files .ico { margin-left: auto; }
+
 /* ---------------- Reveal ---------------- */
 .reveal { opacity: 0; transform: translateY(2.5rem); transition: opacity 1s var(--ease), transform 1.2s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -386,6 +428,19 @@ h1, h2, h3, p { margin: 0; }
   .inspiration__grid { grid-template-columns: 1fr; row-gap: var(--s3); }
   .inspiration__main, .inspiration__side { grid-column: 1; }
 
+  .dl-intro { margin-left: 0; grid-template-columns: 1fr; min-height: 0; padding-top: calc(6rem + 1.5rem); padding-bottom: var(--s9); gap: var(--s5); }
+  .dl-intro::before { top: 6rem; }
+  .dl-intro__text { font-size: 1rem; }
+  .dl-layout { grid-template-columns: 1fr; }
+  .dl-side { top: 0; z-index: 5; background: var(--grey-50); margin: 0 calc(-1 * var(--s4)); padding: var(--s3) var(--s4); overflow-x: auto; scrollbar-width: none; }
+  .dl-side::-webkit-scrollbar { display: none; }
+  .dl-side ul { display: flex; gap: 1.25rem; white-space: nowrap; }
+  .dl-side a { font-size: 1rem; }
+  .dl-section { scroll-margin-top: 3.5rem; padding-top: var(--s6); }
+  .dl-section__title { font-size: 1.4rem; margin-bottom: var(--s4); }
+  .dl-row__btn { font-size: 1rem; padding: 1.1rem 0; }
+  .dl-row__btn .plus { opacity: 1; }
+  .dl { padding-bottom: 7rem; }
   .featured { grid-template-columns: 1fr; }
   .featured__col { min-height: 0; }
   .featured__col + .featured__col { border-left: 0; border-top: 1px solid var(--grey-200); }
