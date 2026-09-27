@@ -20,9 +20,9 @@
       document.getElementById(b.dataset.panel).hidden = !open;
     });
   });
-  document.addEventListener('click', function (e) { if (!e.target.closest('.menu')) closeAll(); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.menu, .mega')) closeAll(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
-  document.querySelectorAll('.panel a').forEach(function (a) {
+  document.querySelectorAll('.panel a, .mega a').forEach(function (a) {
     a.addEventListener('click', function () {
       closeAll();
       if (a.dataset.tabLink) selectTab(a.dataset.tabLink);
