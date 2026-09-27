@@ -157,6 +157,19 @@ h1, h2, h3, p { margin: 0; }
 .mega__cols .mega__list { overflow-y: auto; }
 .mega__cols .mega__foot { white-space: nowrap; }
 
+/* Company variant: image | discover | map */
+.mega--company .mega__cover { height: 100%; }
+.map { position: relative; flex: 1; min-height: 0; overflow: hidden; background: #f1f1f4; }
+.map__roads { position: absolute; inset: 0; width: 100%; height: 100%; }
+.map__pin { position: absolute; left: 47%; top: 50%; width: 1.25rem; height: 1.25rem; background: var(--grey-900); }
+.map__card {
+  position: absolute; left: 47%; top: 50%; transform: translateY(calc(-100% - .8rem));
+  background: var(--grey-50); padding: .7rem .8rem; max-width: 16rem;
+  display: flex; flex-direction: column; gap: .5rem; font-size: .9rem; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.map__card strong { font-weight: 700; line-height: 1.05; }
+.map__card span { color: var(--grey-600); font-weight: 500; }
+
 /* Catalogue cover (own design) */
 .cover { position: relative; overflow: hidden; background: #c9b79c; color: #fff; }
 .cover__tiles { position: absolute; left: 8%; top: 12%; width: 46%; aspect-ratio: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 6%; transform: rotate(-8deg); }
@@ -187,6 +200,14 @@ h1, h2, h3, p { margin: 0; }
 .tile--wood-light { background: repeating-linear-gradient(90deg, rgba(120,90,50,.08) 0 1px, transparent 1px 7px), linear-gradient(180deg, #f3e9d6, #efe3cb 50%, #f1e6d1); }
 .tile--terracotta { background: linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px) 0 0 / 25% 100%, linear-gradient(0deg, rgba(255,255,255,.12) 1px, transparent 1px) 0 0 / 100% 20%, radial-gradient(ellipse at 40% 40%, #c3806b, #a8624f 70%, #8c4e3e); }
 .tile--ceramic { background: linear-gradient(90deg, rgba(0,0,0,.07) 1px, transparent 1px) 0 0 / 60px 60px, linear-gradient(0deg, rgba(0,0,0,.07) 1px, transparent 1px) 0 0 / 60px 60px, radial-gradient(ellipse at 50% 30%, #fbfbf9, #e6e8e6 70%, #cfd3d1); }
+.tile--building {
+  background:
+    radial-gradient(circle at 20% 72%, #2a2a2a 0 5%, transparent 5.3%),
+    radial-gradient(circle at 50% 72%, #2a2a2a 0 5%, transparent 5.3%),
+    radial-gradient(circle at 80% 72%, #2a2a2a 0 5%, transparent 5.3%),
+    linear-gradient(160deg, transparent 0 34%, #b77e5a 34.2%) ,
+    linear-gradient(200deg, #9fc0d8 0 30%, #d9c7b0 60%);
+}
 .tile--stone-room { background: linear-gradient(180deg, #7d8b6c 0 38%, #d6cdbd 38% 40%, #cfc5b3 40% 100%); }
 .tile--bath-room { background: linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px) 0 0 / 80px 80px, linear-gradient(0deg, rgba(0,0,0,.06) 1px, transparent 1px) 0 0 / 80px 80px, linear-gradient(180deg, #e9e7e2 0 62%, #bdb6aa 62%); }
 .tile--wood-room { background: linear-gradient(180deg, #e8e2d8 0 55%, transparent 55%), repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 1px, transparent 1px 90px), linear-gradient(180deg, #b48d65, #9a7552); }
@@ -336,6 +357,10 @@ h1, h2, h3, p { margin: 0; }
   .mega__list { padding-bottom: 3.2rem; }
   .mega__list a { font-size: 1.1rem; }
   .mega__col:last-child .mega__list { overflow-y: auto; padding-bottom: var(--s4); }
+  .mega--company { grid-template-rows: 6rem minmax(0, .8fr) minmax(0, 1.2fr); }
+  .mega--company .mega__list { padding-bottom: 3.2rem; }
+  .map__card { max-width: 11rem; font-size: .8rem; left: 30%; }
+  .map__pin { left: 30%; }
   .mega--products { grid-template-columns: 1fr; grid-template-rows: 7rem minmax(0, 1fr); }
   .mega--products .mega__foot { right: auto; }
   .mega__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); overflow-y: auto; grid-auto-rows: max-content; }
